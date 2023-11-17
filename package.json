@@ -1,0 +1,33 @@
+{
+  "name": "back-sentenseencoder",
+  "version": "0.0.1",
+  "description": "This is the encoder for KarAssistant",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js --ignore ./data --ignore logs/",
+    "startSever": "node index.js 2>&1 | tee -a logs/log-$(date +'%Y-%m-%d').txt",
+    "test": "set NODE_OPTIONS=--no-experimental-fetch && jest -i",
+    "linter": "npx prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarAssistant/BACK-sentenseEncoder.git"
+  },
+  "author": "CodyIsTheSenate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KarAssistant/BACK-sentenseEncoder/issues"
+  },
+  "homepage": "https://github.com/KarAssistant/BACK-sentenseEncoder#readme",
+  "dependencies": {
+    "@tensorflow-models/universal-sentence-encoder": "^1.3.3",
+    "@tensorflow/tfjs": "^4.10.0",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
