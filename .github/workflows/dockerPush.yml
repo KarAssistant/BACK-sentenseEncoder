@@ -79,7 +79,7 @@ jobs:
       - name: Create tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "back-${{ needs.Check.outputs.version }}"
+          tag: "${{ needs.Check.outputs.version }}"
 
       - name: Create summury
         run: |
