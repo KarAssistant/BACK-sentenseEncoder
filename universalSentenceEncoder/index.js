@@ -89,8 +89,8 @@ function loadSkill({ skill }) {
 function getAllSkills(path) {
   let result = [];
   if (fs.existsSync(__dirname + "/../skills/" + path) && fs.lstatSync(__dirname + "/../skills/" + path).isDirectory()) {
-    const elementExist = fs.existsSync(__dirname + "/../skills/" + path + "/index.js");
-    const elementIsFile = elementExist ? fs.lstatSync(__dirname + "/../skills/" + path + "/index.js").isFile() : false;
+    const elementExist = fs.existsSync(__dirname + "/../skills/" + path + "/text.json");
+    const elementIsFile = elementExist ? fs.lstatSync(__dirname + "/../skills/" + path + "/text.json").isFile() : false;
 
     if (elementExist && elementIsFile) {
       result.push(path);
